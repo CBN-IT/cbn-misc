@@ -1,0 +1,23 @@
+<script>
+	function definePath(path, lastObj){
+		if(lastObj==undefined){
+			lastObj = {};
+		}
+		var p = window;
+		path.split(".").forEach(function(n, idx, arr){
+			if (p[n] === undefined) {
+				if (idx === arr.length - 1) {
+					if(typeof lastObj==="function"){
+						lastObj = lastObj();
+					}
+					p[n] = lastObj;
+				} else {
+					p[n] = {};
+				}
+			}
+			p = p[n];
+		});
+
+		return path;
+	}
+</script>
