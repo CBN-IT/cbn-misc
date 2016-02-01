@@ -1,7 +1,10 @@
 {
-  "name": "cbn-misc",
-  "private": true,
-  "dependencies": {
-  },
-  "version": "0.1"
+    "name": "cbn-misc",
+    "private": true,
+    "ignore": [
+        "demo"
+    ],
+    "dependencies": {
+    },
+    "version": "0.1"
 }
