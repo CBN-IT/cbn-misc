@@ -1,13 +1,13 @@
 <script>
-	function definePath(path, lastObj){
-		if(lastObj==undefined){
+	function definePath(path, lastObj) {
+		if (lastObj == undefined) {
 			lastObj = {};
 		}
 		var p = window;
-		path.split(".").forEach(function(n, idx, arr){
+		path.split(".").forEach(function (n, idx, arr) {
 			if (p[n] === undefined) {
 				if (idx === arr.length - 1) {
-					if(typeof lastObj==="function"){
+					if (typeof lastObj === "function") {
 						lastObj = lastObj();
 					}
 					p[n] = lastObj;
@@ -17,7 +17,6 @@
 			}
 			p = p[n];
 		});
-
 		return path;
 	}
 </script>

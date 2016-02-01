@@ -1,0 +1,11 @@
+<script>
+	function defineNotEnumerable(where, name, fc) {
+		if (where[name] === undefined) {
+			Object.defineProperty(where, name, {
+				enumerable: false,
+				writable: true,
+				value: fc
+			});
+		}
+	}
+</script>
